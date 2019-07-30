@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="forte.css">
+    <title>FortePiano</title>
+</head>
+<body>
+ 
+<audio id="1">
+      <source src="piano-master/1.mp3" type="audio/mpeg">
+</audio>
+<audio id="2">
+      <source src="piano-master/2.mp3" type="audio/mpeg">
+</audio>  
+<audio id="3">
+  <source src="piano-master/3.mp3" type="audio/mpeg">
+</audio>  
+<audio id="4">
+  <source src="piano-master/4.mp3" type="audio/mpeg">
+</audio>  
+<audio id="5">
+  <source src="piano-master/5.mp3" type="audio/mpeg">
+</audio>  
+<audio id="6">
+  <source src="piano-master/6.mp3" type="audio/mpeg">
+</audio>  
+<audio id="7">
+  <source src="piano-master/7.mp3" type="audio/mpeg">
+</audio>  
+<audio id="8">
+  <source src="piano-master/8.mp3" type="audio/mpeg">
+</audio>  
+  
+  <p>Зіграй мелодію на онлайн фортепіано</p>
+  <div class="forte">
+  <button class="clavisha" onclick="playAudio(1)" type="button">A</button>
+  <button class="clavisha" onclick="playAudio(2)" type="button">S</button> 
+  <button class="clavisha" onclick="playAudio(3)" type="button">D</button>
+  <button class="clavisha" onclick="playAudio(4)" type="button">F</button>
+  <button class="clavisha" onclick="playAudio(5)" type="button">G</button>
+  <button class="clavisha" onclick="playAudio(6)" type="button">H</button>
+  <button class="clavisha" onclick="playAudio(7)" type="button">J</button>
+  <button class="clavisha" onclick="playAudio(8)" type="button">K</button>
+</div>
+  <script>
+  function playAudio(event) {
+      var weww = document.getElementById(`${event}`);
+      weww.play(); 
+  } 
+  document.onkeyup = function playAudioK(event) {
+    var code = event.keyCode;
+    switch (code) {
+      case 65: var weww = document.getElementById(`1`);
+      break;
+      case 83: var weww = document.getElementById(`2`);
+      break;
+      case 68: var weww = document.getElementById(`3`);
+      break;
+      case 70: var weww = document.getElementById(`4`);
+      break;
+      case 71: var weww = document.getElementById(`5`);
+      break;
+      case 72: var weww = document.getElementById(`6`);
+      break;
+      case 74: var weww = document.getElementById(`7`);
+      break;
+      case 75: var weww = document.getElementById(`8`);
+      break;
+    }
+    weww.play();
+    // if (event.keyCode == 65) {
+    //   var weww = document.getElementById(`1`);
+    //   weww.play(); 
+    // } 
+    // if (event.keyCode == 83) {
+    //   var weww = document.getElementById(`2`);
+    //   weww.play(); 
+    // }
+    // if (event.keyCode == 68) {
+    //   var weww = document.getElementById(`3`);
+    //   weww.play(); 
+    // }
+    // if (event.keyCode == 70) {
+    //   var weww = document.getElementById(`4`);
+    //   weww.play(); 
+    // }
+    // if (event.keyCode == 71) {
+    //   var weww = document.getElementById(`5`);
+    //   weww.play(); 
+    // }
+    // if (event.keyCode == 72) {
+    //   var weww = document.getElementById(`6`);
+    //   weww.play(); 
+    // }
+    // if (event.keyCode == 74) {
+    //   var weww = document.getElementById(`7`);
+    //   weww.play(); 
+    // }
+    // if (event.keyCode == 75) {
+    //   var weww = document.getElementById(`8`);
+    //   weww.play(); 
+    // }
+  } 
+  
+  </script>
+    
+</body>
+</html>
